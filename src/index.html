@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Electron App</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- tool bar for close min max -->
+    <div class="toolBar">
+      <div class="circles">
+        <div class="circle circle-1" onclick="window.close()">
+          <!-- close icon  -->
+          <i class="ri-close-line"></i>
+        </div>
+
+        <div class="circle circle-2" onclick="window.electronAPI.minimize()">
+          <i>-</i>
+        </div>
+
+        <div class="circle circle-3" onclick="handleMaxAndRezise()">
+          <i class="ri-expand-diagonal-line"></i>
+        </div>
+      </div>
+      <div class="bar"></div>
+    </div>
+
+    <!-- main contianer -->
+    <div class="container">
+      <!-- fist task screen -->
+      <div class="tasks-screen">
+        <!-- top screen  -->
+        <div class="top-title">
+          <h1 class="title">Your To Do</h1>
+          <button class="new-task-btn" id="newTaskBtn">New Task</button>
+        </div>
+
+        <div class="task-menu" id="priorityAction">
+          <button class="actions active">ALL</button>
+          <button class="actions">In Progress</button>
+          <button class="actions">Completed</button>
+          <button class="actions">Low</button>
+          <button class="actions">Medium</button>
+          <button class="actions">High</button>
+        </div>
+
+        <div class="tasks" id="taskList">
+          <!-- <span class="empy-message">There is noting here.....</span>
+          <div class="task-box">
+            <div class="left">
+              <div class="circle"></div>
+              <div class="delete">
+                <i class="ri-delete-bin-line"></i>
+              </div>
+              <div class="check-box">
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+              </div>
+              <div class="info">
+                <span>Visit to home</span>
+                <span>27-05-2021 17:12 AM</span>
+              </div>
+            </div>
+            <div class="right">
+              <div class="expand">
+                <i class="ri-arrow-drop-down-line"></i>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+
+      <div class="add-task-screen">
+        <h1 id="top-title">Add a new Task</h1>
+        <form class="add-task-form">
+          <label for="new-des" class="l-des">Description</label>
+          <br />
+          <input type="text" id="new-des" spellcheck="false" />
+
+          <br />
+          <label for="new-priority" class="l-prio">priority</label>
+          <br />
+          <select id="new-priority">
+            <option value="low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="high">High</option>
+          </select>
+        </form>
+
+        <div class="actions">
+          <div class="back" id="addTaskBackBtn">
+            <i class="ri-arrow-left-s-line"></i>
+          </div>
+          <button class="add-task" id="addNewTaskBtn">Add task</button>
+        </div>
+      </div>
+    </div>
+    <script src="./js/utils.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
