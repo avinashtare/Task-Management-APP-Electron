@@ -42,6 +42,10 @@ body {
   overflow-x: hidden;
 }
 
+body::-webkit-scrollbar {
+  width: 0;
+}
+
 .toolBar {
   width: 100%;
   display: flex;

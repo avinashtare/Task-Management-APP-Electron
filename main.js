@@ -13,7 +13,8 @@ function createWindow() {
             devTools: true, // show dev tools like console or etc...
         },
         frame: false, // don't show max min close bar
-        icon: path.join(__dirname, './src/assets/icons/icon.ico')
+        icon: path.join(__dirname, './src/assets/icons/icon.png')
+
     });
 
     mainWindow.loadFile('./src/index.html'); // main html file

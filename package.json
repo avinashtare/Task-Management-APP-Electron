@@ -15,38 +15,39 @@
       "output": "dist"
     },
     "win": {
-      "target": "nsis"
+      "target": "nsis",
+      "icon": "src/assets/icons/icon.ico"
     },
     "mac": {
       "target": [
         "dmg",
         "zip"
       ],
-      "icon": "./src/assets/icons/icon.icns"
+      "icon": "src/assets/icons/icon.icns"
     },
     "linux": {
       "target": [
         "AppImage",
         "deb"
       ],
-      "icon": "./src/assets/icons/icon.png"
+      "icon": "src/assets/icons/icon.png"
     },
     "extraResources": [
       {
-        "from": "./LICENCE.txt",
+        "from": "LICENCE.txt",
         "to": ""
       }
-    ],
-    "icon": "./src/assets/icons/icon.ico",
-    "copyright": "avinash© 2024 avinash tare"
+    ]
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "description": "simple notes app",
   "devDependencies": {
     "electron": "^31.3.1",
-    "electron-builder": "^24.13.3",
-    "nodemon": "^3.1.4"
-  }
+    "electron-builder": "^24.13.3"
+  },
+  "author": "avinash tare",
+  "keywords": [
+    "electron app",
+    "notes app"
+  ],
+  "license": "MIT"
 }
